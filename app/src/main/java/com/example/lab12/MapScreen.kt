@@ -11,7 +11,9 @@ import com.google.maps.android.compose.rememberCameraPositionState
 import com.google.maps.android.compose.rememberMarkerState
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.Marker
-
+import androidx.compose.ui.res.painterResource
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.example.lab12.R
 
 @Composable
 fun MapScreen() {
@@ -30,6 +32,7 @@ fun MapScreen() {
             // Añadir marcador en Denver, Colorado
             Marker(
                 state = rememberMarkerState(position = ArequipaLocation),
+                icon = BitmapDescriptorFactory.fromResource(R.drawable.ic_mountain),
                 title = "Arequipa, Perú"
             )
         }
